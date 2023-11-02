@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all qcom products
-# that inherit from DerpFest
+# that inherit from octaviFest
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,16 +10,16 @@ endif
 endif
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/derp/sepolicy/qcom/private
+    device/octavi/sepolicy/qcom/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/derp/sepolicy/qcom/dynamic \
-    device/derp/sepolicy/qcom/system
+    device/octavi/sepolicy/qcom/dynamic \
+    device/octavi/sepolicy/qcom/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/derp/sepolicy/qcom/dynamic \
-    device/derp/sepolicy/qcom/vendor
+    device/octavi/sepolicy/qcom/dynamic \
+    device/octavi/sepolicy/qcom/vendor
 endif
 
 ifeq (,$(filter msm8937 msm8953 msm8996 msm8998 sdm660 sdm710 sdm845, $(TARGET_BOARD_PLATFORM)))
